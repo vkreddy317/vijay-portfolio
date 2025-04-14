@@ -34,4 +34,17 @@ body {
     border-left: 4px solid #007bff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   }
+
+  
+  details {
+    margin-top: 1rem;
+    background: #f0f0f0;
+    padding: 0.8rem;
+    border-left: 3px solid #007bff;
+    border-radius: 5px;
+  }
+  details summary {
+    font-weight: bold;
+    cursor: pointer;
+  }
   
