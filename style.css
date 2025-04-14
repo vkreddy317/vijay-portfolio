@@ -1,17 +1,10 @@
-body {
-    font-family: sans-serif;
-    padding: 2rem;
-    line-height: 1.6;
-    max-width: 700px;
-    margin: auto;
-  }
-  header {
-    text-align: center;
-  }
-  a {
-    color: blue;
-  }
-  .project {
-    margin-bottom: 1.5rem;
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
   }
   
