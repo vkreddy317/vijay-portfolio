@@ -77,14 +77,65 @@
 </div>
 
     <div class="project">
-      <h3>🧠 Text-to-SQL using Google Generative AI</h3>
-      <p>Built a Streamlit app to convert natural language into SQL using Google Generative AI, enabling easier DB access for non-technical users.</p>
-    </div>
+  <h3>🧠 Natural Language to SQL using Google Generative AI in Streamlit</h3>
+  <p><strong>Bridging the Gap Between Business Queries and SQL with Generative AI</strong></p>
+  <p>Developed a user-friendly Streamlit application that translates plain English questions into executable SQL queries using Google’s Generative AI (PaLM/Gemini). The tool empowers non-technical users to access business data directly from databases without needing SQL expertise.</p>
+
+  <p><strong>📌 Key Features:</strong></p>
+  <ul>
+    <li><strong>Natural Language Input:</strong> Accepts queries like "List top 10 products by revenue in 2023" and generates accurate SQL queries.</li>
+    <li><strong>Schema-Aware Prompting:</strong> Shares table metadata dynamically to guide the LLM for valid SQL generation.</li>
+    <li><strong>Interactive UI:</strong> Streamlit interface shows user query, generated SQL, and output data table in one view.</li>
+    <li><strong>Error Handling:</strong> Captures SQL errors, allows query correction or schema edit, and provides retry options.</li>
+    <li><strong>Live Query Execution:</strong> Connects to databases (PostgreSQL/SQLite) and executes generated SQL on the fly.</li>
+  </ul>
+
+  <p><strong>🛠️ Tech Stack:</strong> Streamlit, Google Generative AI (PaLM/Gemini Pro), Python, PostgreSQL, pdfplumber, ChromaDB</p>
+  <p><strong>🌱 Future Scope:</strong> Explainable SQL, JOINs, schema autodiscovery, RBAC, data visualizations, and multilingual query support.</p>
+</div>
 
     <div class="project">
-      <h3>🌍 Multi-purpose Streamlit AI Apps</h3>
-      <p>Developed multiple Streamlit applications for transcript summarization, PDF interaction, nutrition estimation, and resume parsing using Google Generative AI.</p>
-    </div>
+  <h3>📺 YouTube Transcript Summarization Web App using Google Generative AI</h3>
+  <p><strong>Objective:</strong> Automate the extraction and summarization of YouTube video transcripts into concise summaries (within 250 words) using Google’s Generative AI, delivered via a Streamlit interface.</p>
+
+  <p><strong>📌 Architecture & Workflow:</strong></p>
+  <ul>
+    <li><strong>User Input:</strong> Paste YouTube URL and choose summary style (abstract, bullet points, or both).</li>
+    <li><strong>Transcript Extraction:</strong> Fetches full transcripts using <code>youtube-transcript-api</code>, handles multilingual and unavailable transcripts, and cleans text.</li>
+    <li><strong>Summarization:</strong> Prompts Google Generative AI with custom instructions for well-structured, digestible output.</li>
+    <li><strong>Output:</strong> Displays summary with optional download support in .txt format.</li>
+    <li><strong>File Handling:</strong> Uses <code>pathlib</code> for caching and future transcript support (PDF, etc.).</li>
+  </ul>
+
+  <p><strong>🛠️ Tech Stack:</strong> Streamlit, Python, Google Generative AI (Gemini/PaLM), youtube-transcript-api, pathlib, (planned: PyPDF2)</p>
+
+  <p><strong>🌟 Highlights:</strong></p>
+  <ul>
+    <li>Efficient prompt engineering for accurate summaries</li>
+    <li>Chunking long transcripts to stay within token limits</li>
+    <li>Future-proof modular design (batch mode, multilingual support, Whisper integration)</li>
+  </ul>
+
+  <p><strong>🎯 Use Cases:</strong> Education, training content repurposing, quick lecture review, knowledge assistant</p>
+</div>
+
+<div class="project">
+  <h3>📄 Multi-PDF Interaction Platform</h3>
+  <p>Created an app that allows users to upload multiple PDFs and ask context-aware questions. The system retrieves answers using RAG techniques combined with Google Generative AI, improving document comprehension significantly.</p>
+  <p><strong>Tech Stack:</strong> Streamlit, PyPDF2, ChromaDB, Google Generative AI</p>
+</div>
+
+<div class="project">
+  <h3>🥗 Nutritionist Generative AI Doctor</h3>
+  <p>Developed a vision-enabled Streamlit app that analyzes food images and estimates calorie content using Google Gemini Pro Vision API, assisting in dietary planning.</p>
+  <p><strong>Tech Stack:</strong> Streamlit, pdf2image, Google Gemini Pro Vision, Python</p>
+</div>
+
+<div class="project">
+  <h3>📄 Resume Application Tracking System</h3>
+  <p>Designed a Streamlit web app that evaluates resumes against job descriptions using Google’s Generative AI. The app provides ATS optimization feedback and job-match scoring.</p>
+  <p><strong>Tech Stack:</strong> Streamlit, PyPDF2, Google Generative AI, Python</p>
+</div>
 
     <div class="project">
       <h3>📷 High-Resolution Image Enhancement</h3>
