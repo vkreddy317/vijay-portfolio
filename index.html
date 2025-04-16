@@ -13,13 +13,49 @@
     <a class="resume-button" href="https://drive.google.com/file/d/your-resume-link/view" target="_blank">📄 Download Resume</a>
   </header>
 
-  <section id="about">
+  <section id="skills">
+  <h2>Technical Skills</h2>
+  <ul>
+    <li><strong>Programming:</strong> Python, C, SQL</li>
+    <li><strong>AI/ML Frameworks:</strong> TensorFlow, PyTorch, Scikit-learn, Keras</li>
+    <li><strong>Deep Learning:</strong> CNN, LSTM, Transformers, GANs, RAG, Attention Mechanisms</li>
+    <li><strong>Generative AI:</strong> OpenAI GPT-4, Gemini Pro, BART, T5, LLaMA2, LangChain</li>
+    <li><strong>Databases & Tools:</strong> PostgreSQL, MySQL, MongoDB, ChromaDB, Pinecone</li>
+    <li><strong>Web/App Development:</strong> Flask, Django, Streamlit, HTML/CSS/JS, Bootstrap</li>
+    <li><strong>Version Control & Deployment:</strong> Git, GitHub, Docker, AWS EC2, Netlify</li>
+    <li><strong>Others:</strong> Celery, Redis, FastAPI, Hugging Face Transformers, OpenCV</li>
+  </ul>
+</section>
+
+<section id="about">
     <h2>About Me</h2>
     <p>M.Tech in Artificial Intelligence from IIT Jodhpur, passionate about AI, Quantum Computing, and solving real-world problems with innovative technologies. Experienced in deep learning, generative AI, and building production-grade solutions.</p>
   </section>
 
-  <section id="projects">
-    <h2>Industry Projects</h2>
+  <section id="education">
+  <h2>Education</h2>
+  <div class="project">
+    <h3>🎓 M.Tech in Artificial Intelligence</h3>
+    <p><strong>Institute:</strong> Indian Institute of Technology (IIT) Jodhpur</p>
+    <p><strong>Duration:</strong> 2021 – 2023</p>
+    <p><strong>CGPA:</strong> 7.00 / 10</p>
+    <p><strong>Highlights:</strong></p>
+    <ul>
+      <li>Specialization in Deep Learning, NLP, Computer Vision, MLOps</li>
+      <li>Published thesis on GAN-based high-resolution image enhancement</li>
+      <li>Teaching Assistant for 6 courses including Deep Learning, DLOps, and Machine Learning</li>
+    </ul>
+  </div>
+  <div class="project">
+    <h3>🎓 B.Tech in Electrical & Electronics Engineering</h3>
+    <p><strong>Institute:</strong> Sree Vidyanikethan Engineering College</p>
+    <p><strong>Duration:</strong> 2015 – 2019</p>
+    <p><strong>CGPA:</strong> 7.84 / 10</p>
+  </div>
+</section>
+
+<section id="projects" class="collapsible">
+    <h2>Industry Projects <button class="toggle-btn" onclick="toggleSection('projects')">▼</button></h2>
 
     <div class="project">
   <h3>🚀 Solar Power Forecasting and Fault Detection</h3>
@@ -37,6 +73,7 @@
   </ul>
 
   <p><strong>🛠️ Tech Stack:</strong> TensorFlow, Keras, Scikit-learn, Python, Matplotlib</p>
+  <p><strong>🔗</strong> <a href="https://github.com/vkreddy317/solar-power-forecasting" target="_blank">View GitHub Repository</a></p>
 </div>
 
     <div class="project">
@@ -193,8 +230,8 @@
 </div>
   </section>
 
-  <section id="thesis-projects">
-    <h2>M.Tech Thesis Projects</h2>
+  <section id="thesis-projects" class="collapsible">
+    <h2>M.Tech Thesis Projects <button class="toggle-btn" onclick="toggleSection('thesis-projects')">▼</button></h2>
     <div class="project">
   <h3>📷 High-Resolution Image Enhancement using CinCGAN and RCAN</h3>
   <p><strong>Objective:</strong> Solve the single-image super-resolution problem in an unsupervised manner using GANs, without relying on paired HR-LR datasets or known downsampling kernels. This approach significantly improves degraded image quality affected by blur and noise.</p>
@@ -222,8 +259,8 @@
 </div>
   </section>
 
-  <section id="course-projects">
-    <h2>M.Tech Course Projects</h2>
+  <section id="course-projects" class="collapsible">
+    <h2>M.Tech Course Projects <button class="toggle-btn" onclick="toggleSection('course-projects')">▼</button></h2>
     <div class="project">
   <h3>✍️ POS Tagging using Hidden Markov Model (HMM)</h3>
   <p><strong>Objective:</strong> Build a sequence labeling system to tag each word in a sentence with its correct part-of-speech using probabilistic modeling based on Hidden Markov Models and Viterbi decoding.</p>
@@ -280,5 +317,13 @@
     <p>Phone: +91 9666019317</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/vijay-kumar-reddy-p-303151154/" target="_blank">linkedin.com/in/vijay-kumar-reddy-p</a></p>
   </section>
+<script>
+  function toggleSection(id) {
+    const section = document.getElementById(id);
+    const btn = event.target;
+    section.style.display = section.style.display === 'none' ? 'block' : 'none';
+    btn.textContent = section.style.display === 'none' ? '▶' : '▼';
+  }
+</script>
 </body>
 </html>
