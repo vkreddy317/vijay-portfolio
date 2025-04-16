@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vijay Reddy | AI/ML Engineer</title>
   <link rel="stylesheet" href="style.css" />
+<style>
+  .collapsed .project {
+    display: none;
+  }
+</style>
 </head>
 <body>
   <header>
@@ -321,8 +326,8 @@
   function toggleSection(id) {
   const section = document.getElementById(id);
   const btn = event.target;
-  const isVisible = section.classList.toggle('hidden');
-  btn.textContent = isVisible ? '▶' : '▼';
+  const isCollapsed = section.classList.toggle('collapsed');
+  btn.textContent = isCollapsed ? '▶' : '▼';
 }
 </script>
 </body>
