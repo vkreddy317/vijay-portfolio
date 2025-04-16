@@ -323,12 +323,22 @@
     <p>LinkedIn: <a href="https://www.linkedin.com/in/vijay-kumar-reddy-p-303151154/" target="_blank">linkedin.com/in/vijay-kumar-reddy-p</a></p>
   </section>
 <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".collapsible");
+    sections.forEach((section) => {
+      const btn = section.querySelector(".toggle-btn");
+      if (btn) {
+        btn.textContent = section.classList.contains("collapsed") ? "▶" : "▼";
+      }
+    });
+  });
+
   function toggleSection(id) {
-  const section = document.getElementById(id);
-  const btn = event.target;
-  const isCollapsed = section.classList.toggle('collapsed');
-  btn.textContent = isCollapsed ? '▶' : '▼';
-}
+    const section = document.getElementById(id);
+    const btn = event.target;
+    const isCollapsed = section.classList.toggle("collapsed");
+    btn.textContent = isCollapsed ? "▶" : "▼";
+  }
 </script>
 </body>
 </html>
