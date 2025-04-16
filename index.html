@@ -37,7 +37,6 @@
   </ul>
 
   <p><strong>🛠️ Tech Stack:</strong> TensorFlow, Keras, Scikit-learn, Python, Matplotlib</p>
-  <p><strong>🔗</strong> <a href="https://github.com/vkreddy317/solar-power-forecasting" target="_blank">View GitHub Repository</a></p>
 </div>
 
     <div class="project">
@@ -197,19 +196,81 @@
   <section id="thesis-projects">
     <h2>M.Tech Thesis Projects</h2>
     <div class="project">
-      <h3>📷 High-Resolution Image Enhancement</h3>
-      <p>Improved DIV2K dataset image quality using a custom loss function in Cycle-in-Cycle GANs, enabling better visual fidelity for downstream tasks.</p>
-    </div>
+  <h3>📷 High-Resolution Image Enhancement using CinCGAN and RCAN</h3>
+  <p><strong>Objective:</strong> Solve the single-image super-resolution problem in an unsupervised manner using GANs, without relying on paired HR-LR datasets or known downsampling kernels. This approach significantly improves degraded image quality affected by blur and noise.</p>
+
+  <p><strong>📌 Methodology & Workflow:</strong></p>
+  <ul>
+    <li><strong>CinCGAN Framework:</strong> A novel Cycle-in-Cycle GAN architecture performs noise reduction and super-resolution in two stages using unpaired images.</li>
+    <li><strong>Stage 1:</strong> Transforms noisy/blurry low-resolution images into clean bicubic-downsampled LR images using a CycleGAN with identity, adversarial, and TV losses.</li>
+    <li><strong>Stage 2:</strong> Enhances resolution using RCAN (Residual Channel Attention Network), enabling fine-grained detail recovery via deep CNNs.</li>
+    <li><strong>Joint Optimization:</strong> End-to-end fine-tuning of the pipeline ensures seamless noise removal and upsampling with high PSNR and SSIM.</li>
+  </ul>
+
+  <p><strong>🧠 Model Insights:</strong></p>
+  <ul>
+    <li><strong>RCAN:</strong> Employs Residual-in-Residual (RIR), Residual Channel Attention Blocks (RCAB), and Channel Attention (CA) to prioritize meaningful features.</li>
+    <li><strong>CinCGAN:</strong> Uses two nested CycleGANs with consistent mapping between noisy LR → clean LR → HR, optimized with custom loss functions.</li>
+    <li><strong>Ablation Studies:</strong> Demonstrated effectiveness of each component (D1, D2, G2, G3) in denoising, restoring, and improving image sharpness.</li>
+  </ul>
+
+  <p><strong>🛠️ Tech Stack:</strong> Python, PyTorch, CycleGAN, RCAN, DIV2K Dataset</p>
+
+  <p><strong>📊 Results:</strong> Achieved performance competitive with state-of-the-art SISR models like EDSR and SRGAN — without using paired data. Validated on the Track-2 dataset from the NTIRE-2018 Super-Resolution Challenge.</p>
+
+  <p><strong>🎯 Applications:</strong> Medical imaging, satellite photo enhancement, surveillance video restoration, real-world low-light image enhancement</p>
+</div>
+  </section>
+
+  <section id="course-projects">
+    <h2>M.Tech Course Projects</h2>
+    <div class="project">
+  <h3>✍️ POS Tagging using Hidden Markov Model (HMM)</h3>
+  <p><strong>Objective:</strong> Build a sequence labeling system to tag each word in a sentence with its correct part-of-speech using probabilistic modeling based on Hidden Markov Models and Viterbi decoding.</p>
+
+  <p><strong>📌 Methodology & Workflow:</strong></p>
+  <ul>
+    <li><strong>Corpus:</strong> Used Wall Street Journal (WSJ) dataset — sections 02–21 for training and section 24 for testing.</li>
+    <li><strong>Model:</strong> Applied first-order HMM with supervised learning to derive transition and emission probabilities.</li>
+    <li><strong>Decoding:</strong> Used Viterbi algorithm to find the most likely tag sequence for a given sentence using dynamic programming.</li>
+    <li><strong>Probability Estimation:</strong>
+      <ul>
+        <li><code>P(ti | ti-1)</code> — transition probabilities from tag <em>ti-1</em> to <em>ti</em></li>
+        <li><code>P(wi | ti)</code> — emission probabilities from tag <em>ti</em> to word <em>wi</em></li>
+      </ul>
+    </li>
+    <li><strong>Evaluation:</strong> Achieved tagging accuracy of <strong>94.48%</strong> on the WSJ test set using gold standard tagging.</li>
+  </ul>
+
+  <p><strong>🛠️ Tech Stack:</strong> Python, WSJ Dataset, NumPy, Custom Viterbi Implementation</p>
+
+  <p><strong>🎯 Applications:</strong> NLP pipelines, speech tagging in linguistic research, chatbot preprocessing, and syntactic parsing</p>
+</div>
 
     <div class="project">
-      <h3>✍️ POS Tagging with HMM</h3>
-      <p>Implemented a sequence labeling part-of-speech tagger using the Viterbi algorithm on natural language text, leveraging dynamic programming techniques.</p>
-    </div>
+  <h3>🎓 Neural Architecture Search using Genetic Algorithm</h3>
+  <p><strong>Objective:</strong> Automate the design of optimal CNN architectures for the Fashion MNIST dataset using Genetic Algorithms, optimizing both accuracy and model complexity without manual trial-and-error.</p>
 
-    <div class="project">
-      <h3>🎓 Neural Architecture Search via GA</h3>
-      <p>Used Genetic Algorithms to explore and optimize neural network configurations for better performance and generalization.</p>
-    </div>
+  <p><strong>📌 Methodology & Workflow:</strong></p>
+  <ul>
+    <li><strong>Base CNN Setup:</strong> 5-layer CNN architecture with alternating Normal (NC) and Reduction (RC) layers. Each NC layer used stride=1 and same padding; RC layers used stride=2 and valid padding.</li>
+    <li><strong>Model Pool Creation:</strong> Trained 80 models with varying filter sizes (4–128) and random activation functions. Each model was stored with test accuracy and parameter count.</li>
+    <li><strong>Fitness Function:</strong> Evaluated models based on: <code>fitness = test_accuracy - (param_count / max_param_count)</code>, rewarding high accuracy and fewer parameters.</li>
+    <li><strong>Selection & Crossover:</strong> Selected top 4 models; performed crossover by encoding layer configurations into binary genome strings and exchanging segments at random crossover points.</li>
+    <li><strong>Mutation & Evolution:</strong> Introduced random binary flips to encourage genetic diversity; iteratively refined the population based on performance gains.</li>
+  </ul>
+
+  <p><strong>🧠 Model Insights:</strong></p>
+  <ul>
+    <li>Demonstrated clear trade-off between performance and parameter count.</li>
+    <li>Produced final architectures with balanced efficiency and accuracy (e.g., 85.26% accuracy with only 59K parameters).</li>
+    <li>Successfully avoided overfitting by using validation-split driven training.</li>
+  </ul>
+
+  <p><strong>🛠️ Tech Stack:</strong> Python, TensorFlow/Keras, NumPy, Fashion MNIST, Genetic Algorithm Implementation</p>
+
+  <p><strong>🎯 Applications:</strong> Hyperparameter search automation, neural architecture design for embedded systems, lightweight CNN optimization for edge AI tasks</p>
+</div>
 
   </section>
 
