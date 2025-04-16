@@ -19,7 +19,7 @@
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
+    <h2>Industry Projects</h2>
 
     <div class="project">
   <h3>🚀 Solar Power Forecasting and Fault Detection</h3>
@@ -120,23 +120,82 @@
 </div>
 
 <div class="project">
-  <h3>📄 Multi-PDF Interaction Platform</h3>
-  <p>Created an app that allows users to upload multiple PDFs and ask context-aware questions. The system retrieves answers using RAG techniques combined with Google Generative AI, improving document comprehension significantly.</p>
-  <p><strong>Tech Stack:</strong> Streamlit, PyPDF2, ChromaDB, Google Generative AI</p>
+  <h3>📄 Multi-PDF Interaction Platform using Google Generative AI + ChromaDB</h3>
+  <p><strong>Objective:</strong> Enable users to query and explore multiple PDFs intelligently using a natural language interface powered by Generative AI and vector search.</p>
+
+  <p><strong>📌 Architecture & Workflow:</strong></p>
+  <ul>
+    <li><strong>File Upload:</strong> Upload multiple PDFs via a Streamlit interface; files are processed and stored temporarily using <code>pathlib</code>.</li>
+    <li><strong>Text Extraction:</strong> Raw text extracted from PDFs using <code>PyPDF2</code>, then preprocessed and chunked semantically.</li>
+    <li><strong>Vector Embeddings:</strong> Text chunks are converted into vector embeddings and indexed in <code>ChromaDB</code>.</li>
+    <li><strong>Query Interface:</strong> User enters a question; relevant chunks are retrieved via semantic search.</li>
+    <li><strong>LLM Response:</strong> Retrieved context + user query is sent to Google Generative AI for a grounded response.</li>
+    <li><strong>Output:</strong> Shows the AI answer along with optional reference highlights to original document sources.</li>
+  </ul>
+
+  <p><strong>🛠️ Tech Stack:</strong> Streamlit, Python, PyPDF2, ChromaDB, Google Generative AI (Gemini/PaLM)</p>
+
+  <p><strong>🌟 Highlights:</strong></p>
+  <ul>
+    <li>Multi-PDF vector indexing with real-time semantic retrieval</li>
+    <li>Prompt-engineered LLM responses grounded in actual source material</li>
+    <li>Handles empty PDFs, malformed docs, and non-text files gracefully</li>
+  </ul>
+
+  <p><strong>🎯 Use Cases:</strong> Legal research, policy analysis, technical documentation review, enterprise FAQ systems</p>
 </div>
 
 <div class="project">
-  <h3>🥗 Nutritionist Generative AI Doctor</h3>
-  <p>Developed a vision-enabled Streamlit app that analyzes food images and estimates calorie content using Google Gemini Pro Vision API, assisting in dietary planning.</p>
-  <p><strong>Tech Stack:</strong> Streamlit, pdf2image, Google Gemini Pro Vision, Python</p>
+  <h3>🍱 Nutritionist AI Doctor — Calorie Estimator from Food Images using Google Generative AI</h3>
+  <p><strong>Objective:</strong> Build a vision-enabled AI assistant that estimates calorie content and nutritional insights from food images using Google Gemini Pro Vision, delivered through a user-friendly Streamlit web app.</p>
+
+  <p><strong>📌 Architecture & Workflow:</strong></p>
+  <ul>
+    <li><strong>Image Upload:</strong> Supports food image uploads in JPG/PNG or PDFs (converted using <code>pdf2image</code>).</li>
+    <li><strong>Vision Analysis:</strong> Passes each image to Gemini Pro Vision API with prompts to analyze and break down calorie estimation.</li>
+    <li><strong>Structured Output:</strong> Lists identified food items, approximate portion sizes, individual and total calorie counts, and nutrition commentary.</li>
+    <li><strong>UI Integration:</strong> Displays results in a clean Streamlit layout with download option for summaries.</li>
+  </ul>
+
+  <p><strong>🛠️ Tech Stack:</strong> Streamlit, Python, Google Gemini Pro Vision, pdf2image, PIL, pathlib</p>
+
+  <p><strong>🌟 Highlights:</strong></p>
+  <ul>
+    <li>Advanced multimodal prompt engineering for accurate food recognition and health tips</li>
+    <li>Flexible input handling (images and PDFs)</li>
+    <li>Modular architecture for future integration with mobile apps or wearable sync</li>
+  </ul>
+
+  <p><strong>🎯 Use Cases:</strong> Diet planning, clinical nutrition tracking, fitness app integration, restaurant nutrition menu automation</p>
 </div>
 
 <div class="project">
-  <h3>📄 Resume Application Tracking System</h3>
-  <p>Designed a Streamlit web app that evaluates resumes against job descriptions using Google’s Generative AI. The app provides ATS optimization feedback and job-match scoring.</p>
-  <p><strong>Tech Stack:</strong> Streamlit, PyPDF2, Google Generative AI, Python</p>
-</div>
+  <h3>📑 Resume Application Tracking (ATS) Optimizer using Google Generative AI</h3>
+  <p><strong>Objective:</strong> Create a Streamlit-based app that compares resumes against job descriptions using Google’s Generative AI, offering tailored feedback to improve ATS scores and job-fit alignment.</p>
 
+  <p><strong>📌 Architecture & Workflow:</strong></p>
+  <ul>
+    <li><strong>Resume Upload:</strong> Users upload a PDF resume and paste a job description.</li>
+    <li><strong>Parsing:</strong> Resume text is extracted and cleaned using <code>PyPDF2</code>.</li>
+    <li><strong>Prompted Evaluation:</strong> Google GenAI compares resume vs JD, highlighting matches, gaps, and keyword suggestions.</li>
+    <li><strong>UI Display:</strong> Streamlit interface shows matched skills, gaps, recommendations, and optimized keywords. Feedback can be downloaded.</li>
+  </ul>
+
+  <p><strong>🛠️ Tech Stack:</strong> Streamlit, Python, PyPDF2, Google Generative AI (Gemini/PaLM)</p>
+
+  <p><strong>🌟 Highlights:</strong></p>
+  <ul>
+    <li>Dynamic prompt engineering for role-specific and industry-aligned feedback</li>
+    <li>ATS-alignment scoring logic for section structure and keyword density</li>
+    <li>Scalable design for resume batching, job board integration, and inline editing</li>
+  </ul>
+
+  <p><strong>🎯 Use Cases:</strong> Job seekers, career counselors, campus placement cells, AI-powered HR automation tools</p>
+</div>
+  </section>
+
+  <section id="thesis-projects">
+    <h2>M.Tech Thesis Projects</h2>
     <div class="project">
       <h3>📷 High-Resolution Image Enhancement</h3>
       <p>Improved DIV2K dataset image quality using a custom loss function in Cycle-in-Cycle GANs, enabling better visual fidelity for downstream tasks.</p>
