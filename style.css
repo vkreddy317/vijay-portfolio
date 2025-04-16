@@ -86,3 +86,23 @@ body {
     color: #007acc;
   }
   
+  .project ul {
+    padding-left: 1.2rem;
+    margin: 0.5rem 0 1rem 0;
+  }
+  
+  .project li {
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+  }
+  
+  .project p strong {
+    display: block;
+    margin-top: 0.6rem;
+    color: #444;
+  }
+  
+  .project p {
+    margin: 0.4rem 0;
+  }
+  
