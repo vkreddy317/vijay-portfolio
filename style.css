@@ -105,4 +105,18 @@ body {
   .project p {
     margin: 0.4rem 0;
   }
+  .toggle-btn {
+    font-size: 1rem;
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007acc;
+    transition: transform 0.2s ease;
+  }
   
+  .toggle-btn:hover {
+    color: #005f99;
+    transform: scale(1.1);
+  }
+    
